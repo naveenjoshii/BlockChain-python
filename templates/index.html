@@ -1,0 +1,65 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<style >
+  body{
+    font-family: sans-serif;
+    color: white;
+  }
+</style>
+</head>
+   <body style="background-color:black">
+     <div class="container text-center">
+       <p></p>
+       <u><b><h2>Block Chain Implementation in Python</h2></b></u>
+     </div>
+      <div class="jumbotron d-flex align-items-center" style="margin:12px;background-color:black">
+      <div class="container">
+  <div class="row" >
+    <div class="col">
+      <div class="card"style="background-color:black;border:1px solid white" >
+        <div class="card-block" style="margin:8px">
+         <h4 class="card-title">Add Block to Chain</h4>
+         <form action = "/add" method = "post">
+            <div class="form-group">
+              <b><label for="ip">Enter value</label></b>
+              <input type="text" name="nm" class="form-control" id="ip" placeholder="Enter value">
+            </div>
+            <div class="text-center">
+              <button style="float:center;background-color:#00F2E3;color:black"type="submit" class="btn">Add to Chain</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<div class="jumbotron d-flex align-items-center" style="background-color:black">
+<div class="container">
+<div class="row" >
+  <div class="col">
+    <div class="card" style="background-color:black;border:1px solid white">
+      <div class="card-block" style="margin:8px">
+       <h4 class="card-title">Block Chain</h4>
+       {% if response %}
+       <ul>
+    		{% for i in response %}
+    			<li>{{ i }} </li>
+    		{% endfor %}
+    	</ul>
+      {% else %}
+      <p>uh oh..No data in chain !!</p>
+      {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+   </body>
+</html>
